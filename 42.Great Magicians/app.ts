@@ -2,9 +2,9 @@
 function show_magicians(magicians: string[]) {
   magicians.forEach((magician) => console.log(magician));
 }
-function make_great(magicians: string[]) {
+function make_great(magicians: string[]): string[] {
   const great_magicians = magicians.map((magician) => "The Great " + magician);
-  show_magicians(great_magicians);
+  return great_magicians;
 }
 let magicians: string[] = [
   "Harry Houdini",
@@ -13,4 +13,5 @@ let magicians: string[] = [
   "Dai Vernon",
 ];
 
-make_great(magicians);
+magicians = make_great(magicians);
+show_magicians(magicians);

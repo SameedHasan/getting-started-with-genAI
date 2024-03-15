@@ -4,7 +4,7 @@ function show_magicians(magicians) {
 }
 function make_great(magicians) {
     var great_magicians = magicians.map(function (magician) { return "The Great " + magician; });
-    show_magicians(great_magicians);
+    return great_magicians;
 }
 var magicians = [
     "Harry Houdini",
@@ -12,4 +12,5 @@ var magicians = [
     "Doug Henning",
     "Dai Vernon",
 ];
-make_great(magicians);
+magicians = make_great(magicians);
+show_magicians(magicians);
